@@ -8,11 +8,11 @@ const contHead = document.getElementById('header-container');
 const backdrop = document.getElementById('backdrop');
 const corner = document.getElementById('hot-corner');
 
-// HIDE SHOW
-function hideOnLoadBetter() {
-  projectContent.forEach(item => item.classList.toggle('hidden'));
-}
-hideOnLoadBetter();
+// HIDE SHOW on LOAD >
+// function hideOnLoadBetter() {
+//   projectContent.forEach(item => item.classList.toggle('hidden'));
+// }
+// hideOnLoadBetter();
 
 // 2. hide/show on click
 function clickHeader(elem) {
