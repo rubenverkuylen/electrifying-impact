@@ -37,7 +37,7 @@ iframe {
 }
 
 p {
-  font-size: 0.85em;
+  font-size: 0.83em;
   line-height: 1.4;
   font-weight: 400;
 }
@@ -272,6 +272,12 @@ img {
 
 .hidden {
   display: none;
+}
+
+@media screen and (max-width: 1200px) {
+  #work {
+    flex-basis: 50%;
+  }
 }
 
 @media screen and (max-width: 840px) {
