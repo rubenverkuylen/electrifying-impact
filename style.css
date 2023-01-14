@@ -1,13 +1,22 @@
-@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&family=IBM+Plex+Serif:ital,wght@0,300;1,300&family=Orbitron:wght@500&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=IBM+Plex+Sans:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&family=IBM+Plex+Serif:ital,wght@0,300;1,300&family=Libre+Baskerville:wght@400;700&family=Orbitron:wght@500&family=Sarina&family=Stoke&display=swap");
+
+@font-face {
+  font-family: "Univers";
+  src: url("/library/Univers.woff2") format("woff2");
+}
 
 :root {
   /* CALINE WITH C*/
   --bg-color-caline: rgb(255, 123, 184);
+  --bg-color-caline: rgb(255, 82, 163);
+  --bg-color-caline: rgb(195, 255, 0);
   --text-shadow-caline: 0px 0px 4px white;
   --text-color-caline: rgb(0, 0, 0);
   --second-color-caline: rgb(235, 235, 235);
+  --second-color-caline: rgb(180, 180, 180);
   /* ELECTRIFYING IMPACT */
   --bg-color-impact: rgb(52, 33, 216);
+  --bg-color-impact: rgb(32, 13, 193);
   --text-shadow-impact: none;
   --text-color-impact: rgb(255, 255, 255);
   --second-color-impact: rgb(15, 8, 78);
@@ -17,6 +26,7 @@ html,
 body {
   margin: 0;
   zoom: 0;
+  scrollbar-width: none;
 }
 
 body {
@@ -24,7 +34,8 @@ body {
   width: 100vw;
   background: var(--bg-color);
   color: var(--text-color);
-  font-family: 'IBM Plex Sans', Arial, sans-serif;
+  font-family: "IBM Plex Sans", Arial, sans-serif;
+  font-family: "Univers", Arial, sans-serif;
 }
 
 * {
@@ -37,7 +48,7 @@ iframe {
 }
 
 p {
-  font-size: 0.83em;
+  font-size: 1em;
   line-height: 1.4;
   font-weight: 400;
 }
@@ -101,7 +112,11 @@ img {
 
 #header-caline {
   bottom: 0.5em;
-  font-family: 'Orbitron', serif;
+  font-family: "Orbitron", serif;
+  /* font-family: "Stoke", serif; */
+  /* font-family: "Libre Baskerville", serif; */
+  font-family: "Sarina", serif;
+  font-weight: 700;
 }
 
 /* BACKDROP */
@@ -158,18 +173,19 @@ img {
 }
 
 #work {
-  flex-basis: 70%;
+  flex-basis: 65%;
   margin: 1em;
   overflow: visible;
   padding-bottom: 4em;
-  text-shadow: var(--text-shadow);
+  /* text-shadow: var(--text-shadow); */
 }
 
 #biography {
   flex-basis: 30%;
   display: flex;
   flex-direction: column;
-  font-family: 'IBM Plex Serif', Georgia, serif;
+  /* font-family: "IBM Plex Serif", Georgia, serif; */
+  font-family: "Univers", Arial, sans-serif;
   font-weight: 500;
 }
 
@@ -206,8 +222,9 @@ img {
 }
 
 .project-title {
-  font-family: 'IBM Plex Sans', Arial, sans-serif;
+  /* font-family: "IBM Plex Sans", Arial, sans-serif; */
   flex-basis: 60%;
+  font-weight: 400;
 }
 
 .project-category {
@@ -252,8 +269,9 @@ img {
 #bio-contact {
   position: fixed;
   bottom: 0px;
-  margin: 1em;
+  margin: 1em auto;
   text-align: center;
+  width: 30%;
 }
 
 #bio-contact p {
@@ -278,12 +296,15 @@ img {
   #work {
     flex-basis: 50%;
   }
+  #bio-contact {
+    width: 50%;
+  }
 }
 
 @media screen and (max-width: 840px) {
   #main-container {
     flex-direction: column;
-    padding-top: 2em;
+    padding-top: 3em;
   }
   #work,
   #biography {
@@ -302,7 +323,8 @@ img {
   }
   .header-item {
     width: 50%;
-    font-size: 1.2em;
+    font-size: 2em;
+    line-height: 0.9;
   }
   #header-elec {
     top: 0em;
@@ -330,6 +352,9 @@ img {
     position: relative;
     overflow: hidden;
     max-height: none;
+  }
+  #bio-contact {
+    width: 100%;
   }
   .disclaimer {
     text-align: center;
