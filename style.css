@@ -1,4 +1,6 @@
-@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=IBM+Plex+Sans:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&family=IBM+Plex+Serif:ital,wght@0,300;1,300&family=Libre+Baskerville:wght@400;700&family=Orbitron:wght@500&family=Sarina&family=Stoke&display=swap");
+/* @import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=IBM+Plex+Sans:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&family=IBM+Plex+Serif:ital,wght@0,300;1,300&family=Libre+Baskerville:wght@400;700&family=Orbitron:wght@500&family=Sarina&family=Stoke&display=swap"); */
+
+@import url("https://fonts.googleapis.com/css2?family=Sarina&display=swap");
 
 @font-face {
   font-family: "Univers";
@@ -7,15 +9,11 @@
 
 :root {
   /* CALINE WITH C*/
-  --bg-color-caline: rgb(255, 123, 184);
-  --bg-color-caline: rgb(255, 82, 163);
   --bg-color-caline: rgb(195, 255, 0);
   --text-shadow-caline: 0px 0px 4px white;
   --text-color-caline: rgb(0, 0, 0);
-  --second-color-caline: rgb(235, 235, 235);
   --second-color-caline: rgb(180, 180, 180);
   /* ELECTRIFYING IMPACT */
-  --bg-color-impact: rgb(52, 33, 216);
   --bg-color-impact: rgb(32, 13, 193);
   --text-shadow-impact: none;
   --text-color-impact: rgb(255, 255, 255);
@@ -67,7 +65,6 @@ img {
     rgb(255, 0, 0, 0) 5%,
     rgb(255, 0, 0, 0) 40%
   );
-  /* background-size: 100% 100%; */
   position: fixed;
   width: 100vw;
   height: 100vh;
@@ -98,7 +95,6 @@ img {
   text-decoration: none;
 }
 .header-item a:hover {
-  /* color: var(--bg-color); */
   color: transparent;
   -webkit-text-stroke-width: 1px;
   -webkit-text-stroke-color: var(--text-color);
@@ -107,14 +103,10 @@ img {
 #header-elec {
   top: 0.5em;
   font-weight: 500;
-  /* font-family: Arial; */
 }
 
 #header-caline {
   bottom: 0.5em;
-  font-family: "Orbitron", serif;
-  /* font-family: "Stoke", serif; */
-  /* font-family: "Libre Baskerville", serif; */
   font-family: "Sarina", serif;
   font-weight: 700;
 }
@@ -134,7 +126,6 @@ img {
   position: fixed;
   width: 100vw;
   height: 100vh;
-  /* z-index: 0; */
   display: flex;
 }
 
@@ -146,23 +137,17 @@ img {
     background-position: 0 100%;
   }
 }
+
 /* CONTAINER */
-
-/* .container {
-  text-shadow: var(--text-shadow);
-} */
-
 #main-container {
   display: flex;
-  padding-top: 4em;
+  padding-top: 5em;
+  margin-left: 1em;
+  margin-right: 2em;
+  column-gap: 4em;
 }
 
 .container a {
-  /* background: var(--second-color);
-  color: var(--bg-color);
-  text-decoration: none;
-  border-radius: 8px;
-  padding: 0 5px; */
   color: var(--text-color);
   font-weight: 500;
 }
@@ -174,19 +159,19 @@ img {
 
 #work {
   flex-basis: 65%;
-  margin: 1em;
+  /* margin: 1em; */
   overflow: visible;
   padding-bottom: 4em;
-  /* text-shadow: var(--text-shadow); */
 }
 
 #biography {
-  flex-basis: 30%;
   display: flex;
+  flex-basis: 35%;
   flex-direction: column;
-  /* font-family: "IBM Plex Serif", Georgia, serif; */
   font-family: "Univers", Arial, sans-serif;
   font-weight: 500;
+  justify-content: space-between;
+  /* min-height: calc(100vh - 6em); */
 }
 
 .mirror {
@@ -222,7 +207,6 @@ img {
 }
 
 .project-title {
-  /* font-family: "IBM Plex Sans", Arial, sans-serif; */
   flex-basis: 60%;
   font-weight: 400;
 }
@@ -233,8 +217,8 @@ img {
 }
 
 .project-year {
-  /* font-style: italic; */
   font-weight: 300;
+  margin-left: auto;
 }
 
 .project-content {
@@ -253,29 +237,36 @@ img {
 
 .artwork {
   flex-basis: 35%;
-  /* height: 0%; */
   max-height: 310px;
 }
 
 /* BIOGRAPHY */
 #bio-intro {
-  position: fixed;
+  /* position: fixed;
   top: 0px;
-  margin: 1em;
+  margin: 1em; */
   max-height: 90vh;
   overflow-y: hidden;
 }
 
+#bio-intro p {
+  margin-top: 0.2em;
+}
+
 #bio-contact {
-  position: fixed;
-  bottom: 0px;
-  margin: 1em auto;
-  text-align: center;
-  width: 30%;
+  /* position: fixed;
+  bottom: 0px; */
+  /* margin: 0em auto; */
+  display: flex;
+  align-self: center;
+  /* text-align: center; */
+  /* width: 30%; */
 }
 
 #bio-contact p {
   font-weight: 400;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .disclaimer {
@@ -293,18 +284,20 @@ img {
 }
 
 @media screen and (max-width: 1200px) {
-  #work {
+  #work,
+  #biography {
     flex-basis: 50%;
   }
-  #bio-contact {
+  /* #bio-contact {
     width: 50%;
-  }
+  } */
 }
 
 @media screen and (max-width: 840px) {
   #main-container {
     flex-direction: column;
-    padding-top: 3em;
+    margin-bottom: 1em;
+    margin-right: 1em;
   }
   #work,
   #biography {
@@ -355,6 +348,7 @@ img {
   }
   #bio-contact {
     width: 100%;
+    text-align: center;
   }
   .disclaimer {
     text-align: center;
@@ -366,5 +360,20 @@ img {
     -o-transform: scale(-1, 1);
     -ms-transform: scale(-1, 1);
     transform: scale(-1, 1);
+  }
+}
+
+@media screen and (min-width: 841px) {
+  #biography {
+    min-height: calc(100vh - 6em);
+  }
+}
+
+@media screen and (min-width: 1600px) {
+  p {
+    font-size: 1.25em;
+  }
+  .project-header {
+    font-size: 1.25em;
   }
 }
