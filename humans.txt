@@ -1,0 +1,13 @@
+/* TEAM */
+	Client: Kamile Rimkute (for Electrifying Impact)
+	
+	Concept, design and development: Ruben Verkuylen
+	Contact: info [at] rubenverkuylen.nl
+	From: The Hague, Netherlands
+	
+
+/* SITE */
+	Last update: January 17th 2022
+	Language: English
+	Doctype:HTML5
+	IDE: Visual Studio Code, FileZilla
